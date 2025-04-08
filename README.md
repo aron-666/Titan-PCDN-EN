@@ -77,6 +77,18 @@ Global options:
 
 ### Basic Installation and Startup
 
+#### Other Regions Installation
+
+```bash
+# 1. Download the script and set permissions (International region uses GitHub source, only need to download once)
+git clone https://github.com/aron-666/Titan-PCDN-EN.git titan-pcdn
+cd titan-pcdn
+chmod +x pcdn.sh
+
+# 2. Start the service (will enter interactive configuration)
+sudo ./pcdn.sh start
+```
+
 #### China Region Installation
 
 ```bash
@@ -89,19 +101,19 @@ chmod +x pcdn.sh
 sudo ./pcdn.sh start
 ```
 
-#### Other Regions Installation
+### Quick Deployment (One-Click Start)
+
+#### Other Regions Deployment
 
 ```bash
 # 1. Download the script and set permissions (International region uses GitHub source, only need to download once)
-git clone https://github.com/aron-666/Titan-PCDN.git titan-pcdn
+git clone https://github.com/aron-666/Titan-PCDN-EN.git titan-pcdn
 cd titan-pcdn
 chmod +x pcdn.sh
 
-# 2. Start the service (will enter interactive configuration)
-sudo ./pcdn.sh start
+# 2. Other regions quick start
+sudo ./pcdn.sh start -t your_TOKEN -i
 ```
-
-### Quick Deployment (One-Click Start)
 
 #### China Region Deployment
 
@@ -113,18 +125,6 @@ chmod +x pcdn.sh
 
 # 2. China region quick start
 sudo ./pcdn.sh start -t your_TOKEN -r cn -i cn
-```
-
-#### Other Regions Deployment
-
-```bash
-# 1. Download the script and set permissions (International region uses GitHub source, only need to download once)
-git clone https://github.com/aron-666/Titan-PCDN.git titan-pcdn
-cd titan-pcdn
-chmod +x pcdn.sh
-
-# 2. Other regions quick start
-sudo ./pcdn.sh start -t your_TOKEN -i
 ```
 
 > Note: The `-r` parameter is optional, used to specify region. When set to `cn`, special processing for China region will be performed.
@@ -146,11 +146,11 @@ Options:
 
 Examples:
 ```bash
-# China region
-sudo ./pcdn.sh start -t your_token_here -r cn
-
 # Other regions
 sudo ./pcdn.sh start -t your_token_here
+
+# China region
+sudo ./pcdn.sh start -t your_token_here -r cn
 ```
 
 ### Configure PCDN Service
@@ -165,11 +165,11 @@ Options:
 
 Examples:
 ```bash
-# China region
-sudo ./pcdn.sh config -t your_token_here -r cn
-
 # Other regions
 sudo ./pcdn.sh config -t your_token_here
+
+# China region
+sudo ./pcdn.sh config -t your_token_here -r cn
 ```
 
 ### Stop PCDN Service
